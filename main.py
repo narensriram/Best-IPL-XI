@@ -2,8 +2,8 @@ import random
 
 # A list of top IPL players (just an example, in reality, you can include actual stats or ratings)
 best_xi = [
-    'Travis Head','Travis', 'Head' 'Sunil Narine','Sunil', 'Narine' 'Virat Kohli','Virat', 'Kohli' 'Riyan Parag', 'Riyan', 'Parag' 'Venkatesh Iyer','Venky', 'Venkatesh'
-    'Andre Russell','Andre', 'Russell' 'Heinrich Klaasen','Heinrich','Klaasen' 'Mitchell Starc','Mitchell', 'Stark' 'Thangarasu Natarajan','Nattu', 'Natarajan', 'T Natarajan','Varun Chakravarthy', 'Varun', 'Chakravarthy' 'Jasprit Bumrah','Jasprit', 'Bumrah'
+    'Travis Head','Sunil Narine','Virat Kohli', 'Riyan Parag', 'Venkatesh Iyer',
+    'Andre Russell','Heinrich Klaasen', 'Mitchell Starc', 'Thangarasu Natarajan','Varun Chakravarthy','Jasprit Bumrah'
 
 ]
 
@@ -34,7 +34,7 @@ def rate_team(user_team):
 
 # Main game function with a loop
 def ipl_random_xi_game():
-    print("Welcome to the IPL Random XI Generator!")
+    print("Welcome to the IPL Random XI Generator! Make sure to add your players full name: ")
 
     # This will be the user's team list
     user_team = []
