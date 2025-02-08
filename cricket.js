@@ -10,6 +10,8 @@ function addPlayer() {
     let input = document.getElementById("playerInput").value.trim();
     let feedback = document.getElementById("feedback");
     let teamList = document.getElementById("teamList");
+    let countDisplay = document.getElementById("count");
+    let ratingDisplay = document.getElementById("rating");
 
     if (!input) {
         feedback.textContent = "Please enter a player's name.";
@@ -27,13 +29,16 @@ function addPlayer() {
         listItem.textContent = input;
         teamList.appendChild(listItem);
         feedback.textContent = `${input} added to your team!`;
+
+        let matchingPlayers = userTeam.length;
+        countDisplay.textContent = matchingPlayers;
+        ratingDisplay.textContent = rateTeam(matchingPlayers);
     } else {
         feedback.textContent = `${input} is not in the Best XI. Try again!`;
     }
 
     if (userTeam.length === 11) {
-        let rating = rateTeam(userTeam.length);
-        feedback.textContent = `Congratulations! You completed your team. Rating: ${rating}`;
+        feedback.textContent = "🎉 Congratulations! You built the Best XI!";
     }
 
     document.getElementById("playerInput").value = "";
@@ -45,4 +50,12 @@ function rateTeam(count) {
     if (count >= 6) return "Good";
     if (count >= 3) return "Average";
     return "Worst";
+}
+
+function resetGame() {
+    userTeam = [];
+    document.getElementById("teamList").innerHTML = "";
+    document.getElementById("feedback").textContent = "Start adding players!";
+    document.getElementById("count").textContent = "0";
+    document.getElementById("rating").textContent = "-";
 }
