@@ -10,23 +10,11 @@
     <div class="container">
         <h1>IPL Best XI Game</h1>
         <p>Guess the best IPL XI players!</p>
-        
-        <div class="input-section">
-            <input type="text" id="playerInput" placeholder="Enter player name">
-            <button onclick="addPlayer()">Add Player</button>
-        </div>
-        
-        <h2>Your Team</h2>
+        <input type="text" id="playerInput" placeholder="Enter player name">
+        <button onclick="addPlayer()">Add Player</button>
         <ul id="teamList"></ul>
-
-        <h2>Game Status</h2>
-        <p id="feedback">Start adding players!</p>
-        <p><strong>Correct Players:</strong> <span id="count">0</span> / 11</p>
-        <p><strong>Team Rating:</strong> <span id="rating">-</span></p>
-
-        <button id="resetButton" onclick="resetGame()">Reset Game</button>
+        <p id="feedback"></p>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
