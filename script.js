@@ -19,13 +19,13 @@ function addPlayer() {
 
     if (!input) {
         feedback.textContent = "Please enter a player's name.";
-        feedback.classList.add("warning");
+        feedback.classList.add("error");  // Red color for warnings
         return;
     }
 
     if (userTeam.includes(input)) {
         feedback.textContent = `${input} is already in your team!`;
-        feedback.classList.add("warning");
+        feedback.classList.add("warning");  // Orange for duplicates
         return;
     }
 
@@ -36,14 +36,14 @@ function addPlayer() {
         listItem.textContent = input;
         teamList.appendChild(listItem);
         feedback.textContent = `${input} is correct! They are now added to your team!`;
-        feedback.classList.add("success");
+        feedback.classList.add("success"); // Green for correct
 
         let matchingPlayers = userTeam.length;
         countDisplay.textContent = matchingPlayers;
         ratingDisplay.textContent = rateTeam(matchingPlayers);
     } else {
         feedback.textContent = `${input} is not in the Best XI. Try again!`;
-        feedback.classList.add("error");
+        feedback.classList.add("error"); // Red for incorrect
     }
 
     if (userTeam.length === 11) {
