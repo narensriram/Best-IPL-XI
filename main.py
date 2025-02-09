@@ -1,23 +1,16 @@
 import random
 
-# A list of top IPL players (just an example, in reality, you can include actual stats or ratings)
+# A list of top IPL players (actual selection can be customized)
 best_xi = [
-    'Travis Head','Sunil Narine','Virat Kohli', 'Riyan Parag', 'Venkatesh Iyer',
-    'Andre Russell','Heinrich Klaasen', 'Mitchell Starc', 'Thangarasu Natarajan','T Natarajan', 'Varun Chakravarthy','Jasprit Bumrah'
-
+    'Travis Head', 'Sunil Narine', 'Virat Kohli', 'Riyan Parag', 'Venkatesh Iyer',
+    'Andre Russell', 'Heinrich Klaasen', 'Mitchell Starc', 'T Natarajan', 'Varun Chakravarthy', 'Jasprit Bumrah'
 ]
 
-
-# Function to rate the user's team based on matching the best XI
+# Function to rate the user's team based on matching players with Best XI
 def rate_team(user_team):
-    matching_players = 0
+    matching_players = sum(1 for player in user_team if player in best_xi)
 
-    # Using a for loop to check how many players match with the best XI
-    for player in user_team:
-        if player in best_xi:
-            matching_players += 1
-
-    # Rate the team based on how many players match
+    # Assigning rating based on matches
     if matching_players == 11:
         rating = "Best"
     elif matching_players >= 9:
@@ -31,41 +24,41 @@ def rate_team(user_team):
 
     return matching_players, rating
 
-
-# Main game function with a loop
+# Main game function with an interactive loop
 def ipl_random_xi_game():
-    print("Welcome to the IPL Random XI Generator! Here are the Rules: \n 1. Make sure to add your players full name\n 2. Capitilization and misspelling will cost! 3. Have fun!")
+    print("\n🔥 Welcome to the IPL Random XI Game! 🔥\n")
+    print("📜 RULES:")
+    print("1️⃣ Enter the full name of each player.")
+    print("2️⃣ Capitalization & spelling **MUST** be correct!")
+    print("3️⃣ Keep trying until you build a full XI.")
+    print("4️⃣ Have fun! 🎉\n")
 
-    # This will be the user's team list
     user_team = []
 
-    while len(user_team) < 11:  # Keep running until the user team has 11 correct players
-        print(f"\nYou currently have {len(user_team)} correct players.")
+    while len(user_team) < 11:
+        print(f"\n✅ You have {len(user_team)} players so far.")
 
-        # Ask the user to input 11 players using a for loop
         player = input(f"Enter player {len(user_team) + 1}: ").strip()
 
-        # If player is valid (part of the "best XI") and not already in the team
+        # Check if the player is correct and not already in the team
         if player in best_xi and player not in user_team:
             user_team.append(player)
-            print(f"{player} added to your team!")
-        elif player not in best_xi:
-            print(f"{player} is not in the best XI, try again!")
+            print(f"🎯 {player} added to your team!")
+        elif player in user_team:
+            print(f"⚠️ {player} is already in your team! Choose another player.")
         else:
-            print(f"{player} is already in your team. Please pick another player.")
+            print(f"❌ {player} is not in the Best XI. Try again!")
 
-        # Check how many correct players are in the team
+        # Update rating after each attempt
         matching_players, rating = rate_team(user_team)
 
-        # Display the rating and give feedback
-        print(f"\nPlayers matched with the Best XI: {matching_players} out of 11")
-        print(f"Your team's rating so far: {rating}")
+        print(f"\n⭐ Players matched: {matching_players} / 11")
+        print(f"🏆 Your current team rating: {rating}")
 
-    # Game ends when all 11 players are correct
-    print("\nCongratulations! You've successfully built the Best IPL XI!")
-    print(f"Your team: {', '.join(user_team)}")
-    print("Game Over.")
+    # Game over message
+    print("\n🎉 Congratulations! You successfully built the Best IPL XI! 🎉")
+    print(f"🏏 Your final team: {', '.join(user_team)}")
+    print("✅ Game Over.")
 
-
-# Start the game
+# Run the game
 ipl_random_xi_game()
