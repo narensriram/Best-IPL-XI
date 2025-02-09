@@ -1,6 +1,6 @@
 import random
 
-# Best IPL XI Selection (Can be customized)
+# best ipl eleven 
 best_xi = [
     'Travis Head', 'Sunil Narine', 'Virat Kohli', 'Riyan Parag', 'Venkatesh Iyer',
     'Andre Russell', 'Heinrich Klaasen', 'Mitchell Starc', 'Thangarasu Natarajan', 
@@ -11,19 +11,7 @@ best_xi = [
 def rate_team(user_team):
     matching_players = sum(1 for player in user_team if player in best_xi)
 
-    # Assign a rating based on the number of correct players
-    if matching_players == 11:
-        rating = "Best 🏆"
-    elif matching_players >= 9:
-        rating = "Great 🔥"
-    elif matching_players >= 6:
-        rating = "Good ✅"
-    elif matching_players >= 3:
-        rating = "Average ⚠️"
-    else:
-        rating = "Worst ❌ "
 
-    return matching_players, rating
 
     user_team = []
 
