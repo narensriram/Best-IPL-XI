@@ -28,7 +28,7 @@ function addPlayer() {
         let listItem = document.createElement("li");
         listItem.textContent = input;
         teamList.appendChild(listItem);
-        feedback.textContent = `${input} added to your team!`;
+        feedback.textContent = `${input} is correct! They are now added to your team!`;
 
         let matchingPlayers = userTeam.length;
         countDisplay.textContent = matchingPlayers;
