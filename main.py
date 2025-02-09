@@ -3,7 +3,7 @@ import random
 # A list of top IPL players (actual selection can be customized)
 best_xi = [
     'Travis Head', 'Sunil Narine', 'Virat Kohli', 'Riyan Parag', 'Venkatesh Iyer',
-    'Andre Russell', 'Heinrich Klaasen', 'Mitchell Starc', 'T Natarajan', 'Varun Chakravarthy', 'Jasprit Bumrah'
+    'Andre Russell', 'Heinrich Klaasen', 'Mitchell Starc', 'Thangarasu Natarajan', 'Varun Chakravarthy', 'Jasprit Bumrah'
 ]
 
 # Function to rate the user's team based on matching players with Best XI
