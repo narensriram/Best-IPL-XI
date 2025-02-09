@@ -37,20 +37,13 @@ function addPlayer() {
         feedback.textContent = `${input} is not in the Best XI. Try again!`;
     }
 
-    if (userTeam.length === 11) {
+    if (userTeam.length === 10) {
         feedback.textContent = "🎉 Congratulations! You built the Best XI!";
     }
 
     document.getElementById("playerInput").value = "";
 }
 
-function rateTeam(count) {
-    if (count === 11) return "Best";
-    if (count >= 9) return "Great";
-    if (count >= 6) return "Good";
-    if (count >= 3) return "Average";
-    return "Worst";
-}
 
 function resetGame() {
     userTeam = [];
