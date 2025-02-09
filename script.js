@@ -19,13 +19,13 @@ function addPlayer() {
 
     if (!input) {
         feedback.textContent = "Please enter a player's name.";
-        feedback.classList.add("error");  // Red color for warnings
+        feedback.classList.add("error");   
         return;
     }
 
     if (userTeam.includes(input)) {
         feedback.textContent = `${input} is already in your team!`;
-        feedback.classList.add("warning");  // Orange for duplicates
+        feedback.classList.add("warning");   //orange for doubles 
         return;
     }
 
@@ -36,14 +36,14 @@ function addPlayer() {
         listItem.textContent = input;
         teamList.appendChild(listItem);
         feedback.textContent = `${input} is correct! They are now added to your team!`;
-        feedback.classList.add("success"); // Green for correct
+        feedback.classList.add("success"); 
 
         let matchingPlayers = userTeam.length;
         countDisplay.textContent = matchingPlayers;
         ratingDisplay.textContent = rateTeam(matchingPlayers);
     } else {
         feedback.textContent = `${input} is not in the Best XI. Try again!`;
-        feedback.classList.add("error"); // Red for incorrect
+        feedback.classList.add("error"); // red for wrong
     }
 
     if (userTeam.length === 11) {
@@ -54,16 +54,16 @@ function addPlayer() {
     document.getElementById("playerInput").value = "";
 }
 
-// Function to rate the team based on number of correct players
+
 function rateTeam(matchingPlayers) {
-    if (matchingPlayers === 11) return "🏆 Best";
-    if (matchingPlayers >= 9) return "🔥 Great";
-    if (matchingPlayers >= 6) return "✅ Good";
-    if (matchingPlayers >= 3) return "⚠️ Average";
-    return "❌ Worst";
+    if (matchingPlayers === 11) return "Best 🏆 ";
+    if (matchingPlayers >= 9) return "Great 🔥";
+    if (matchingPlayers >= 6) return "Good ✅";
+    if (matchingPlayers >= 3) return "Average ⚠️";
+    return "Worst ❌ ";
 }
 
-// Reset the game
+
 function resetGame() {
     userTeam = [];
     score = 0;
