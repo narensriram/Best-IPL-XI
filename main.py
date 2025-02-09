@@ -25,15 +25,6 @@ def rate_team(user_team):
 
     return matching_players, rating
 
-# Main game function with an interactive loop
-def ipl_random_xi_game():
-    print("\n🏏 Welcome to the IPL Best XI Game! 🏏\n")
-    print("🔹 RULES:")
-    print("   - Enter the **full name** of each player.")
-    print("   - **Correct spelling and capitalization are required!**")
-    print("   - Build a full **XI-player team**.")
-    print("   - Have fun! 🎉\n")
-
     user_team = []
 
     while len(user_team) < 11:
@@ -51,15 +42,14 @@ def ipl_random_xi_game():
         else:
             print(f"❌ **{player}** is not in the Best XI. Try again!")
 
-        # Update rating after each attempt
+
         matching_players, rating = rate_team(user_team)
 
         print(f"\n⭐ **Players matched:** {matching_players} / 11")
         print(f"🏆 **Your current team rating:** {rating}")
 
-    # Game Over Message
-    print("\n🎉 **Congratulations! You successfully built an IPL Best XI!** 🎉")
-    print(f"🏏 **Your final team:** {', '.join(user_team)}")
+    print("\n🎉 **Congratulations! You have successfully built the IPL Best XI!** 🎉")
+    print(f" **Your final team:** {', '.join(user_team)}")
     print("✅ **Game Over.**")
 
 # Run the game
