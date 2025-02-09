@@ -26,12 +26,12 @@ def rate_team(user_team):
 
 # Main game function with an interactive loop
 def ipl_random_xi_game():
-    print("\n🔥 Welcome to the IPL Random XI Game! 🔥\n")
-    print("📜 RULES:")
-    print("1️⃣ Enter the full name of each player.")
-    print("2️⃣ Capitalization & spelling **MUST** be correct!")
-    print("3️⃣ Keep trying until you build a full XI.")
-    print("4️⃣ Have fun! 🎉\n")
+    print("Welcome to the IPL Random XI Game!\n")
+    print("RULES:")
+    print(" Enter the full name of each player.")
+    print(" Capitalization & spelling **MUST** be correct!")
+    print(" Keep trying until you build a full XI.")
+    print(" Have fun! 🎉\n")
 
     user_team = []
 
