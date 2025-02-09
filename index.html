@@ -12,9 +12,15 @@
         <p>Guess the best IPL XI players! Make sure to spell their names correctly and input their full names!</p>
         <input type="text" id="playerInput" placeholder="Enter player name">
         <button onclick="addPlayer()">Add Player</button>
+        <button onclick="resetGame()">Reset Game</button>
+        
+        <h3>Team Progress: <span id="count">0</span> / 11</h3>
+        <h3>Team Rating: <span id="rating">-</span></h3>
+
         <ul id="teamList"></ul>
         <p id="feedback"></p>
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
