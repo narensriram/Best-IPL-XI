@@ -9,44 +9,34 @@ body {
 .container {
     background: white;
     padding: 20px;
-    margin: 30px auto;
-    width: 90%;
-    max-width: 500px;
+    margin: 50px auto;
+    width: 50%;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     color: #333;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-p {
-    color: #555;
-    font-size: 16px;
 }
 
 input {
-    width: calc(100% - 22px);
+    width: 70%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    text-align: center;
 }
 
 button {
     background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 5px;
-    transition: background 0.3s ease;
+    margin: 5px;
 }
 
 button:hover {
@@ -56,46 +46,30 @@ button:hover {
 #teamList {
     list-style-type: none;
     padding: 0;
-    margin-top: 15px;
 }
 
 #teamList li {
     background: #ddd;
     margin: 5px auto;
     padding: 10px;
-    width: 80%;
+    width: 70%;
     border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
 }
 
+/* Feedback Message Colors */
 #feedback {
     font-weight: bold;
     margin-top: 10px;
-    font-size: 16px;
 }
 
-/* Dynamic feedback colors */
 .success {
-    color: #28a745;  /* Green */
-}
-
-.warning {
-    color: #ffc107;  /* Yellow */
+    color: green; /* ✅ Green for correct players */
 }
 
 .error {
-    color: #d9534f;  /* Red */
+    color: red; /* ❌ Red for incorrect players */
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 600px) {
-    .container {
-        width: 95%;
-        margin: 20px auto;
-    }
-
-    input, button {
-        width: 90%;
-    }
+.warning {
+    color: orange; /* ⚠️ Orange for duplicate entries */
 }
