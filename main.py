@@ -13,15 +13,15 @@ def rate_team(user_team):
 
     # Assign a rating based on the number of correct players
     if matching_players == 11:
-        rating = "🏆 Best"
+        rating = "Best 🏆"
     elif matching_players >= 9:
-        rating = "🔥 Great"
+        rating = "Great 🔥"
     elif matching_players >= 6:
-        rating = "✅ Good"
+        rating = "Good ✅"
     elif matching_players >= 3:
-        rating = "⚠️ Average"
+        rating = "Average ⚠️"
     else:
-        rating = "❌ Worst"
+        rating = "Worst ❌ "
 
     return matching_players, rating
 
